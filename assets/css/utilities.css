@@ -1,0 +1,64 @@
+/* JAI SHREE RAM */
+
+:root {
+    --salmon: #EF9D71;
+    --dsalomon: #966144;
+    --cyan: #AEDEE0;
+    --dcyan: #576F70;
+    --yellow: #F5F19C;
+    --blue: #2544EE;
+    --black: #000;
+    --white: #fff;
+    --lwhite: #7b7b7ba0;
+}
+
+
+*::selection {
+    background: var(--lwhite);
+}
+
+
+body[theme="black"] {
+    background-color: var(--black);
+}
+
+body[theme="black"] .theme-text {
+    color: var(--white);
+}
+
+body[theme="cyan"] {
+    background-color: var(--cyan);
+}
+
+body[theme="cyan"] .theme-text {
+    color: var(--black);
+}
+
+body[theme="white"] {
+    background-color: var(--white);
+}
+
+body[theme="white"] .theme-text {
+    color: var(--black);
+}
+
+body[theme="salmon"] {
+    background-color: var(--salmon);
+}
+
+body[theme="salmon"] .theme-text {
+    color: var(--black);
+}
+
+body[theme="salmon"] .theme-text ::selection {
+    color: var(--white);
+    background: none;
+}
+
+.hidden{
+    display: none;
+}
+
+.flex{
+    display: flex;
+}

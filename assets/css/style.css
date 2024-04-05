@@ -1,0 +1,331 @@
+/* JAI SIYA RAM */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Gilroy-Regular;
+}
+
+body{
+    transition: background-color ease-out .45s;
+}
+
+*::-webkit-scrollbar{
+    background: none;
+    width: 5px;
+}
+*::-webkit-scrollbar-thumb{
+    background: #212121;
+    border-radius: 10px;
+}
+
+main {
+    width: 100%;
+    position: relative;
+}
+
+.loader {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #000;
+    color: #fff;
+}
+
+.loader p {
+    opacity: .3;
+    letter-spacing: 1.5px;
+    font-family: Gilroy-Bold;
+    font-weight: 100;
+    line-height: .9;
+    font-size: large;
+}
+
+.loader h1 {
+    font-size: 6vw;
+    font-weight: 500;
+    font-family: Gilroy-Bold;
+    line-height: .9;
+}
+
+.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1vw 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 9999999;
+}
+
+.logo {
+    cursor: pointer;
+    width: 6vw;
+}
+
+.contactBtn {
+    position: relative;
+    width: 12vw;
+    background: var(--lwhite);
+    padding: 1.1vw 1vw;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.23vw;
+    font-weight: 700;
+    letter-spacing: .01px;
+    pointer-events: all;
+}
+
+.heroContainer {
+    position: relative; /* Make the container relative */
+    width: 100%;
+    height: 150vh; /* This Height is Important to give the pin effect and Color Changing*/
+    color: var(--white);
+}
+
+.heroSticky {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Ensure the sticky header is above other content */
+}
+
+.heroTop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    clip-path: circle(var(--clip) at 50% 50%);
+    z-index: 2; /* Ensure the .heroTop is above .heroBack */
+    background: var(--black);
+}
+
+.heroBack {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 0; /* Ensure the .heroBack is behind other content */
+    overflow: hidden;
+}
+
+.heroTopMain{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.heroTopMain h1{
+    position: relative;
+}
+
+.heroWelcome {
+    font-size: 2vw;
+    font-weight: 100;
+    top: -20%;   
+    font-family: Tenuity;
+    letter-spacing: 5px;
+}
+
+.heroText{
+    font-size: 6vw;
+    line-height: 1.2;
+    font-family: Gilroy-Bold;
+    color: transparent;
+    letter-spacing: 5px;
+    -webkit-text-stroke: 2px var(--white);
+}
+
+.heroMarquee {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    white-space: nowrap;
+    transition: all linear 1s;
+}
+
+.heroMarquee span{
+    -webkit-text-stroke: 2px var(--lwhite);
+    opacity: .8;
+}
+
+.marqueeSlide{
+    width: fit-content;
+}
+
+.heroSlideWrapper{
+    gap: 1vw;
+}
+
+.heroSlide{
+    width: fit-content;
+}
+
+.marqueeLightContainer{
+    position: absolute;
+    width: 8%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    background: #222222;
+    border-radius: 100%;
+    box-shadow: 0 0 200px var(--white);
+}
+
+.marqueeLight{
+    position: absolute;
+    background: red;
+    width: 10%;
+    height: 10%;
+    box-shadow: 0 0 200px var(--white);
+}
+
+.heroScrollDown{
+    position: absolute;
+    bottom: 12%;
+    left: 0;
+    rotate: 90deg;
+    width: fit-content;
+    height: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: .2vw;
+}
+
+.heroScrollDown p{
+    padding: 0 1vw;
+    font-size: 1vw;
+    font-weight: 800;
+}
+
+
+.heroScrollBar{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    border-radius: 20px;
+    background: var(--lwhite);
+    overflow: hidden;
+}
+
+.heroScrollBarChild{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--white);
+}
+
+.about{
+    width: 100%;
+    height: 100vh;
+    z-index: 999999;
+    position: relative;
+    top: -4vh;
+    padding: 0 5vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.aboutHeading{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.aboutHeading h2{
+    position: absolute;
+    font-size: 4vw;
+    font-family: Gilroy-Bold;
+    font-weight: 100;
+    display: flex;
+    transition: border ease 1s;
+}
+
+.aboutLeft{
+    position: relative;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+}
+
+.aboutPara{
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.aboutPara p{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    font-size: 1.5vw;
+    font-weight: 500;
+    font-family: Majer;
+}
+
+
+
+.aboutRight{
+    position: relative;
+    width: 30%;
+    height: 100%;
+    padding: 3vw 3vw;
+    overflow: hidden;
+}
+
+.aboutRight img{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 20px;
+}
